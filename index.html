@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flipbook Example</title>
+    <link rel="stylesheet" href="path/to/turn.css"> <!-- Add the appropriate Turn.js CSS file -->
+    <style>
+        body,
+        html {
+            height: 100%;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #flipbook {
+            width: 800px;
+            height: 600px;
+        }
+
+        #flipbook .hard {
+            background-color: #ccc;
+            border: 1px solid #666;
+        }
+
+        #flipbook div {
+            background-size: cover;
+            background-position: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="flipbook">
+        <div class="hard" style="background-image:url('images/1.png')"></div>
+        <div style="background-image:url('images/2.png')"></div>
+        <div style="background-image:url('images/3.png')"></div>
+        <div style="background-image:url('images/4.png')"></div>
+        <div style="background-image:url('images/5.png')"></div>
+        <div style="background-image:url('images/6.png')"></div>
+        <div style="background-image:url('images/7.png')"></div>
+        <div style="background-image:url('images/8.png')"></div>
+        <div style="background-image:url('images/9.png')"></div>
+        <div style="background-image:url('images/10.png')"></div>
+        <div style="background-image:url('images/11.png')"></div>
+        <div style="background-image:url('images/12.png')"></div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="turn.js"></script> <!-- Add the appropriate Turn.js file -->
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#flipbook").turn({
+                width: 800,
+                height: 600,
+                autoCenter: true
+            });
+        });
+    </script>
+</body>
+
+</html>
